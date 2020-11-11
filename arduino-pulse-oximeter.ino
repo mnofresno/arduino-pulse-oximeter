@@ -1,5 +1,6 @@
 #include "MAX30100_PulseOximeter.h"
 #include <U8g2lib.h>
+
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0);
 bool initialized=false;
 int average_beat=0;
