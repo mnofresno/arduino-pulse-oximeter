@@ -89,7 +89,6 @@ void init_pox() {
     for(;;);
   }
   pox.setIRLedCurrent(MAX30100_LED_CURR_7_6MA);
-  // Register a callback for the beat detection
   pox.setOnBeatDetectedCallback(onBeatDetected);
 }
 
@@ -105,9 +104,7 @@ void setup()
  
 void loop()
 {
-  // Make sure to call update as fast as possible
   pox.update();
-  //    if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
   if (number_of_measures >= max_number_of_measures) {
     average_beat = average_beat / number_of_measures;
     average_SpO2 = average_SpO2 / number_of_measures;
@@ -127,7 +124,4 @@ void loop()
   average_beat += pox.getHeartRate();
   average_SpO2 += pox.getSpO2();
   number_of_measures++;
-        //tsLastReport = millis();
-    //}
-
 }
