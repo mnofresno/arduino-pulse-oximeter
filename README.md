@@ -21,12 +21,19 @@ This Arduino project depends on the following libraries:
 
 ## Bill of materials:
 
-* MAX30102 Pulse oximeter sensor (Costs approx. 3 U$D)
-* Arduino NANO Atmega328 (Costs approx. 10 U$D)
-* Display Oled 1.3 Blanco 128x64 I2c Delta Iot (Costs approx. 8 U$D)
+* MAX30102 Pulse oximeter sensor (Costs approx. 5.34 U$D)
+* Arduino NANO Atmega328 (Costs approx. 4.15 U$D)
+* Display Oled 1.3 Blanco 128x64 I2c Delta Iot (Costs approx. 6.25 U$D)
 * Various dupont jumper wires (Costs approx. 1 U$D)
 
-Total cost: 22 U$D
+Total cost: 16.74 U$D
+
+## Troubleshooting
+
+Some batches of the max sensor module made in China have an error in the design of the printed circuit board that can cause the measurement to be unstable because a defect in the voltage regulation part of the board.
+That happened to me and I had to correct the board to work properly and it was very easy.
+The error is not dangerous because it is very noticeable and the vast majority of the time the board directly can't keep powered on reliably, leaving only sometimes the possibility that it will turn on but that it measures unrealistic values ​​such as 30% saturation.
+This error is fixable and after doing that I've never had a problem with the sensor module again. For more details on how to repair the sensor board refer to the [following web page](https://www.google.com/amp/s/reedpaper.wordpress.com/2018/08/22/pulse-oximeter-max30100-max30102-how-to-fix-wrong-board/amp/).
 
 ## TODO:
 
